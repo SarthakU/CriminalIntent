@@ -37,14 +37,6 @@ public class CrimeFragment extends Fragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mCrime = new Crime();
-
-        FragmentManager fm = getFragmentManager();
-        Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
-        if (fragment == null)
-        {
-            fragment = new CrimeFragment();
-            fm.beginTransaction().add(R.id.fragmentContainer,fragment).commit();
-        }
     }
 
     @Override
